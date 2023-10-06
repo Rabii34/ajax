@@ -20,15 +20,15 @@
   </div> -->
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Name:</label>
-    <input type="text" class="form-control" name="username"  aria-describedby="emailHelp">
+    <input type="text" class="form-control" name="name" id="name"  >
   </div>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Email:</label>
-    <input type="email" class="form-control" name="email"  aria-describedby="emailHelp">
+    <input type="email" class="form-control" name="email" id="email" >
   </div>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Phone number:</label>
-    <input type="phone number" class="form-control" name="phone_num"  aria-describedby="emailHelp">
+    <input type="phone number" class="form-control" name="phone" id="phone" >
   </div>  
   <input type="submit" class="btn btn-success" id="submit" name="submit">
   <br><br>
@@ -67,10 +67,10 @@ $(document).ready(function(){
                 // loadData();
         })
     }
-})
+
 loadData();
 $('#submit').click(function(){
-  $ajax({
+  $.ajax({
     url:'insert.php',
     type:'POST',
     data:$('#form input').serialize(),
@@ -80,7 +80,7 @@ $('#submit').click(function(){
     }
   })
 })
-
+})
 </script>
 </body>
 </html>
